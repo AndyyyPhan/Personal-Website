@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<!-- Bootstrap Components Added:
+1. Navigation Bar
+2. Cards with Images
+3. Accordion
+4. Buttons with Bootstrap Styling
+5. Responsive Grid System
+-->
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -15,78 +22,107 @@
 
         <title>Andy Phan | Software Engineer & CS Student</title>
         <link rel="stylesheet" href="styles/main.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet/less" type="text/css" href="styles/custom.less">
     </head>
     <body>
-        <header class="container">
-            <h1>Hello, I am Andy Phan</h1>
-            <h2>Innovative Software Engineer & CS Student at UVA</h2>
-            <nav>
-                <a href="about.html">About</a> |
-                <a href="projects.html">Projects</a> |
-                <a href="experience.html">Experience</a> |
-                <a href="contact.html">Contact</a>
-            </nav>
-        </header>
-        <main class="container">
-            <section class="row">
-                <div class="col-6">
-                    <h2>Software Engineering & AI</h2>
-                    <p>Proven ability to design, develop, and deploy robust software solutions with a focus on
-                        user experience and problem-solving. Strong foundation in Python (Django), Java (JavaFX), and
-                        familiar with cloud platforms (Heroku, AWS) and databases (PostgreSQL, SQLite). Eager to leverage
-                        my skills in a challenging role and continuously learn about emerging technologies, especially in
-                        the field of AI/ML.</p>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="">Andy Phan</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
                 </div>
-                <div class="col-6">
-                    <img src="gorgeous_me.jpg" alt="Picture of Andy Phan" width="200">
+            </div>
+        </nav>
+        <main class="container">
+            <h1 class="text-center my-4">Welcome to Andy Phan's Portfolio</h1>
+            <section class="row align-items-center py-4">
+                <div class="col-md-6">
+                    <h2>Software Engineering & AI</h2>
+                    <p>Proven ability to design, develop, and deploy robust software solutions with a focus
+                        on user experience and problem-solving. Strong foundation in
+                        Python (Django), Java (JavaFX), and familiar with cloud platforms (Heroku, AWS) and
+                        databases (PostgreSQL, SQLite). Eager to leverage my skills in a challenging role and
+                        continuously learn about emerging technologies, especially in the field of AI/ML.</p>
+                    <a href="projects.html" class="btn btn-primary">View My Projects</a>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="gorgeous_me.jpg" alt="Picture of Andy Phan" class="img-fluid rounded">
                 </div>
             </section>
-            <section class="container">
-                <h2>Highlights</h2>
+            <section class="container text-center">
+                <h2 class="fw-bold my-4">Highlights</h2>
                 <div class="row">
-                    <div class="col-4 highlight-item">
-                        <img src="project.png" alt="project icon" width="200">
-                        <a href="projects.html">
-                            <h3>Projects</h3>
-                        </a>
-                        <p>Developed various projects using Scikit-Learn, Django, JavaFX, and Tkinter,
-                            solving real-world problems through innovative software solutions.</p>
+                    <div class="col-md-4">
+                        <div class="card shadow-sm p-3">
+                            <img src="project.png" class="card-img-top" alt="project icon">
+                            <div class="card-body">
+                                <a href="projects.html"><h3 class="card-title">Projects</h3></a>
+                                <p class="card-text">Developed various projects using Scikit-Learn, Django,
+                                    JavaFX, and Tkinter, solving real-world problems through innovative software
+                                    solutions.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-4 highlight-item">
-                        <img src="experience.png" alt="experience icon" width="200">
-                        <a href="experience.html">
-                            <h3>Experience</h3>
-                        </a>
-                        <p>Strong background in teamwork, leadership, and customer service, honed while working at TeaDM,
-                            ensuring smooth operations and excellent service.</p>
+                    <div class="col-md-4">
+                        <div class="card shadow-sm p-3">
+                            <img src="experience.png" class="card-img-top" alt="experience icon">
+                            <div class="card-body">
+                                <a href="experience.html"><h3 class="card-title">Experience</h3></a>
+                                <p class="card-text">Strong background in teamwork, leadership,
+                                    and customer service, honed while working at TeaDM, ensuring smooth operations
+                                    and excellent service.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-4 highlight-item">
-                        <img src="contact.png" alt="contact icon">
-                        <a href="contact.html">
-                            <h3>Get in Touch</h3>
-                        </a>
-                        <address><a href="mailto:tmq6ed@virginia.edu">tmq6ed@virginia.edu</a></address>
-                        <p>Feel free to reach out for collaborations, opportunities, or inquiries.</p>
+                    <div class="col-md-4">
+                        <div class="card shadow-sm p-3">
+                            <img src="contact.png" class="card-img-top" alt="contact icon">
+                            <div class="card-body">
+                                <a href="contact.html"><h3 class="card-title">Get in Touch</h3></a>
+                                <address><a href="mailto:tmq6ed@virginia.edu">tmq6ed@virginia.edu</a></address>
+                                <p class="card-text">Feel free to reach out for collaborations, opportunities, or inquiries.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container py-5">
+                <h2>Frequently Asked Questions</h2>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                What programming languages do you use?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                I primarily use Python and Java for development, with experience in Django, JavaFX, and machine learning frameworks.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
-
-        <footer class="container primary-footer">
-            <div class="row">
-                <div class="col-12">
-                    <nav>
-                        <a href="index.html">Home</a> |
-                        <a href="about.html">About</a> |
-                        <a href="projects.html">Projects</a> |
-                        <a href="experience.html">Experience</a> |
-                        <a href="contact.html">Contact</a>
-                    </nav>
-                </div>
-            </div>
-            <div class="col-12">
-                <small class="copyright">Copyright &copy; 2025 Andy Phan</small>
-            </div>
+        <footer class="container-fluid bg-dark text-white text-center py-4">
+            <nav class="nav justify-content-center">
+                <a class="nav-link text-white" href="index.html">Home</a>
+                <a class="nav-link text-white" href="about.html">About</a>
+                <a class="nav-link text-white" href="projects.html">Projects</a>
+                <a class="nav-link text-white" href="experience.html">Experience</a>
+                <a class="nav-link text-white" href="contact.html">Contact</a>
+            </nav>
+            <small class="d-block mt-3">Copyright &copy; 2025 Andy Phan</small>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>

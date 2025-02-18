@@ -1,0 +1,47 @@
+@primary-color: #007bff;
+@secondary-color: #343a40;
+@card-bg: #f8f9fa;
+@hover-shadow: rgba(0, 0, 0, 0.2);
+
+.navbar {
+  background-color: @secondary-color;
+}
+
+.navbar-brand, .nav-link {
+  color: white !important;
+  &:hover {
+    color: @primary-color !important;
+  }
+}
+
+.btn-primary {
+  background-color: @primary-color;
+  border-color: @primary-color;
+  &:hover {
+    background-color: darken(@primary-color, 10%);
+    border-color: darken(@primary-color, 10%);
+  }
+}
+
+.card {
+  background-color: @card-bg;
+  border: none;
+  box-shadow: 0px 2px 4px @hover-shadow;
+  &:hover {
+    box-shadow: 0px 4px 8px @hover-shadow;
+    transform: translateY(-2px);
+  }
+}
+
+.accordion-button {
+  background-color: lighten(@primary-color, 40%);
+  &:hover {
+    background-color: lighten(@primary-color, 30%);
+  }
+}
+
+footer {
+  background-color: @secondary-color;
+  color: white;
+  padding: 20px 0;
+}
